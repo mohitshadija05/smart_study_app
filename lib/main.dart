@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/add_subject_screen.dart'; // Import the new screen
 
 void main() {
   runApp(SmartStudyApp());
@@ -52,7 +53,20 @@ class DashboardScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () async {
+                // Navigate to the AddSubjectScreen and wait for the result
+                final newSubject = await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AddSubjectScreen()),
+                );
+
+                // If a new subject was added, display it
+                if (newSubject != null) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Added subject: $newSubject')),
+                  );
+                }
+              },
               icon: Icon(Icons.add),
               label: Text('Add Subject'),
             ),
