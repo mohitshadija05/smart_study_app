@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # smart_study_app
 
 A new Flutter project.
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# smart_study_app
+>>>>>>> 646d3eb763f7e25487e6daa5386a55d1b963da24
